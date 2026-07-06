@@ -14,7 +14,7 @@ const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
 });
 
-const siteUrl = "https://testchinesecn.github.io/web_dmt_hau_viet";
+const siteUrl = "https://hauvietsolar.com";
 const siteTitle = "Hậu Việt Solar | Lắp đặt điện mặt trời áp mái";
 const siteDescription =
   "Tư vấn lắp đặt điện mặt trời cho hộ gia đình, nhà nghỉ, quán cafe và xưởng nhỏ. Tính công suất, chi phí đầu tư và mốc hoàn vốn theo hóa đơn điện thực tế.";
