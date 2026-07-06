@@ -2,7 +2,7 @@
 
 const LEADS_SHEET_NAME = "Leads";
 const PROJECTS_SHEET_NAME = "Projects";
-const DEFAULT_NOTIFY_NAME = "Điện mặt trời Sơn Hà";
+const DEFAULT_NOTIFY_NAME = "Hậu Việt Solar";
 const MAX_TELEGRAM_FILE_SIZE = 8 * 1024 * 1024;
 const MAX_PROJECT_FILE_SIZE = 12 * 1024 * 1024;
 
@@ -19,7 +19,7 @@ function doGet(e) {
 
     return jsonResponse({
       ok: true,
-      service: "Son Ha Solar webhook",
+      service: "Hậu Việt Solar webhook",
       actions: ["projects", "lead", "saveProject", "deleteProject"],
     });
   } catch (error) {
@@ -70,14 +70,14 @@ function testTelegramAuthorization() {
 
   postTelegram(token, "sendMessage", {
     chat_id: chatId,
-    text: "Test Telegram từ Google Apps Script - Điện mặt trời Sơn Hà",
+    text: "Test Telegram từ Google Apps Script - Hậu Việt Solar",
   });
 }
 
 function authorizeProjectDrive() {
   const folder = getProjectMediaFolder();
   const testFile = folder.createFile(
-    "son-ha-solar-drive-auth-test.txt",
+    "hau-viet-solar-drive-auth-test.txt",
     "Nếu thấy file này trong thùng rác thì Apps Script đã được cấp quyền ghi Drive.",
     MimeType.PLAIN_TEXT
   );
@@ -343,7 +343,7 @@ function normalizeProject(input) {
     gallery: gallery,
     summary: stringOrDefault(
       input.summary,
-      "Công trình thực tế do Điện mặt trời Sơn Hà khảo sát, thiết kế và thi công."
+      "Công trình thực tế do Hậu Việt Solar khảo sát, thiết kế và thi công."
     ),
     details: details.length ? details : [
       "Khảo sát mái, hướng nắng, bóng che và vị trí đi dây.",

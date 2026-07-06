@@ -14,15 +14,15 @@ const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
 });
 
-const siteUrl = "https://dienmattroisonha.com";
-const siteTitle = "Điện mặt trời Sơn Hà | Lắp đặt điện mặt trời áp mái";
+const siteUrl = "https://testchinesecn.github.io/web_dmt_hau_viet";
+const siteTitle = "Hậu Việt Solar | Lắp đặt điện mặt trời áp mái";
 const siteDescription =
   "Tư vấn lắp đặt điện mặt trời cho hộ gia đình, nhà nghỉ, quán cafe và xưởng nhỏ. Tính công suất, chi phí đầu tư và mốc hoàn vốn theo hóa đơn điện thực tế.";
 const shareImage = {
   url: "/share-cover.jpg",
   width: 1280,
   height: 604,
-  alt: "Biển hiệu Điện mặt trời Sơn Hà với số điện thoại 0975 284 194 và website dienmattroisonha.com",
+  alt: "Hậu Việt Solar tư vấn lắp đặt điện mặt trời áp mái",
 };
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     url: siteUrl,
-    siteName: "Điện mặt trời Sơn Hà",
+    siteName: "Hậu Việt Solar",
     locale: "vi_VN",
     type: "website",
     images: [shareImage],

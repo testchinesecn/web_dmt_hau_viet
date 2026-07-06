@@ -5,8 +5,8 @@ import { AdminProjectTable } from "@/components/AdminProjectTable";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Admin | Website điện mặt trời Sơn Hà",
-  description: "Trang quản trị lead và dự án thực tế của website Điện mặt trời Sơn Hà.",
+  title: "Admin | Website Hậu Việt Solar",
+  description: "Trang quản trị lead và dự án thực tế của website Hậu Việt Solar.",
 };
 
 export default function AdminPage() {

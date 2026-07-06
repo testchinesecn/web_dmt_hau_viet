@@ -268,7 +268,7 @@ async function telegramFetch(botToken: string, method: string, payload: unknown)
 }
 
 function buildTelegramMessage(lead: LeadPayload) {
-  const brandName = process.env.LEAD_NOTIFY_FROM_NAME ?? "Điện mặt trời Sơn Hà";
+  const brandName = process.env.LEAD_NOTIFY_FROM_NAME ?? "Hậu Việt Solar";
   const lines = [
     `<b>Lead mới - ${escapeHtml(brandName)}</b>`,
     `Nguồn: ${escapeHtml(lead.source)}`,

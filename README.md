@@ -27,7 +27,7 @@ npm run build
 Tạo file `.env.local` từ `.env.example` rồi điền các biến:
 
 ```bash
-LEAD_NOTIFY_FROM_NAME="Điện mặt trời Sơn Hà"
+LEAD_NOTIFY_FROM_NAME="Hậu Việt Solar"
 TELEGRAM_BOT_TOKEN="token_bot_telegram"
 TELEGRAM_CHAT_ID="chat_id_nhan_thong_bao"
 GOOGLE_SHEET_WEBHOOK_URL="url_web_app_google_apps_script"
@@ -52,7 +52,7 @@ Form tư vấn sẽ gửi tin nhắn lead về Telegram. Nếu khách upload ả
 4. Vào `Project Settings` > `Script Properties`, thêm:
    - `TELEGRAM_BOT_TOKEN`: token bot Telegram.
    - `TELEGRAM_CHAT_ID`: chat ID nhận lead.
-   - `LEAD_NOTIFY_FROM_NAME`: `Điện mặt trời Sơn Hà`.
+   - `LEAD_NOTIFY_FROM_NAME`: `Hậu Việt Solar`.
 5. Deploy: `Deploy` > `New deployment` > chọn `Web app`.
 6. Chọn `Execute as: Me` và `Who has access: Anyone`, rồi copy Web app URL vào `GOOGLE_SHEET_WEBHOOK_URL` hoặc `NEXT_PUBLIC_LEAD_WEBHOOK_URL`.
 7. Nếu cập nhật code Apps Script sau này, chọn `Deploy` > `Manage deployments` > `Edit` > `New version` để URL cũ vẫn dùng được.

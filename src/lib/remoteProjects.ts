@@ -4,7 +4,7 @@ const DEFAULT_PROJECTS_API_URL =
   "https://script.google.com/macros/s/AKfycbzTXqxrjxvuB8DUe-nj4E2DxqH4zOvIu2ZPh-fUOFT-XN4NyZX5QIwimPGnu0gEbUY/exec";
 const PROJECTS_CACHE_KEY = "son-ha-remote-projects-cache";
 export const DEFAULT_PROJECT_ADMIN_TOKEN =
-  process.env.NEXT_PUBLIC_PROJECT_ADMIN_TOKEN?.trim() || "SonHaSync_2026";
+  process.env.NEXT_PUBLIC_PROJECT_ADMIN_TOKEN?.trim() || "HauVietSync_2026";
 
 const MAX_PROJECT_FILE_SIZE = 12 * 1024 * 1024;
 const MAX_PROJECT_UPLOAD_BYTES = 22 * 1024 * 1024;
@@ -268,7 +268,7 @@ function normalizeProject(input: unknown): ManagedProject | null {
       : [],
     summary: stringOrDefault(
       item.summary,
-      "Công trình thực tế do Điện mặt trời Sơn Hà khảo sát, thiết kế và thi công.",
+      "Công trình thực tế do Hậu Việt Solar khảo sát, thiết kế và thi công.",
     ),
     details: Array.isArray(item.details)
       ? item.details.map((detail) => String(detail).trim()).filter(Boolean)

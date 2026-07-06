@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
 import { contactInfo } from "@/data/contact";
 
 const quickLinks = [
@@ -36,22 +35,22 @@ export function Footer() {
         <div>
           <p className="font-black text-white">Liên hệ</p>
           <div className="mt-3 grid gap-2 text-sm text-slate-300">
-            <p>Điện thoại/Zalo: {contactInfo.phone}</p>
+            <div>
+              <p>Điện thoại/Zalo:</p>
+              <div className="mt-1 grid gap-1 font-semibold text-slate-100">
+                {contactInfo.phoneLines.map((phone) => (
+                  <p key={phone}>{phone}</p>
+                ))}
+              </div>
+            </div>
             <p>Email: {contactInfo.email}</p>
-            <div className="grid gap-2">
-              <p>
-                Địa chỉ: <span className="font-semibold text-slate-100">{contactInfo.address}</span>
-              </p>
-              <a
-                href={contactInfo.mapHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit items-center gap-2 rounded-md border border-amber-300/45 bg-amber-300/10 px-3 py-2 font-black text-amber-200 transition hover:bg-amber-300 hover:text-slate-950"
-                aria-label={`Mở Google Maps tới ${contactInfo.address}`}
-              >
-                <MapPin size={16} aria-hidden />
-                Mở bản đồ Google Maps
-              </a>
+            <div>
+              <p>Địa chỉ:</p>
+              <div className="mt-1 grid gap-1 font-semibold text-slate-100">
+                {contactInfo.addresses.map((address) => (
+                  <p key={address}>{address}</p>
+                ))}
+              </div>
             </div>
             <p>Giờ làm việc: {contactInfo.workingHours}</p>
           </div>

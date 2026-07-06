@@ -4,7 +4,7 @@ Web chạy GitHub Pages nên không có server riêng để lưu ảnh/video. Ph
 
 - Lead khách gửi vẫn ghi vào sheet `Leads` và gửi Telegram.
 - Dự án admin thêm/sửa ghi vào sheet `Projects`.
-- Ảnh/video dự án upload vào Google Drive folder `Son Ha Solar Project Media`.
+- Ảnh/video dự án upload vào Google Drive folder `Hau Viet Solar Project Media`.
 
 ## Cập Nhật Apps Script
 
@@ -19,12 +19,12 @@ Web chạy GitHub Pages nên không có server riêng để lưu ảnh/video. Ph
 ```text
 TELEGRAM_BOT_TOKEN = token bot Telegram
 TELEGRAM_CHAT_ID = chat ID nhận lead
-LEAD_NOTIFY_FROM_NAME = Điện mặt trời Sơn Hà
-PROJECT_ADMIN_TOKEN = SonHaSync_2026
+LEAD_NOTIFY_FROM_NAME = Hậu Việt Solar
+PROJECT_ADMIN_TOKEN = HauVietSync_2026
 PROJECT_MEDIA_FOLDER_ID = ID folder Google Drive dùng để lưu ảnh/video công trình
 ```
 
-Để lấy `PROJECT_MEDIA_FOLDER_ID`: tạo một folder trong Google Drive, ví dụ `Son Ha Solar Project Media`, mở folder đó rồi copy phần ID trên URL.
+Để lấy `PROJECT_MEDIA_FOLDER_ID`: tạo một folder trong Google Drive, ví dụ `Hau Viet Solar Project Media`, mở folder đó rồi copy phần ID trên URL.
 
 Ví dụ URL folder:
 
@@ -53,4 +53,4 @@ Hàm này sẽ tạo thử một file nhỏ trong folder Drive rồi đưa vào 
    - `Who has access: Anyone`
 6. Bấm `Deploy`.
 
-Không cần nhập mã đồng bộ trên trang admin nữa. Sau khi Apps Script đã có `PROJECT_ADMIN_TOKEN = SonHaSync_2026`, admin chỉ cần bấm thêm/sửa/xóa công trình.
+Không cần nhập mã đồng bộ trên trang admin nữa. Sau khi Apps Script đã có `PROJECT_ADMIN_TOKEN = HauVietSync_2026`, admin chỉ cần bấm thêm/sửa/xóa công trình.

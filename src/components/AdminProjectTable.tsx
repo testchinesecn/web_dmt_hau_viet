@@ -233,7 +233,7 @@ export function AdminProjectTable() {
       gallery: [...keptGallery, ...uploadedGallery.map((item) => item.media)],
       summary:
         getValue(formData, "summary") ||
-        "Công trình thực tế do Điện mặt trời Sơn Hà khảo sát, thiết kế và thi công.",
+        "Công trình thực tế do Hậu Việt Solar khảo sát, thiết kế và thi công.",
       details: splitLines(getValue(formData, "details")),
     };
 

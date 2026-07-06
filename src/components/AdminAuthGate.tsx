@@ -3,7 +3,7 @@
 import { Lock, LogIn, LogOut, ShieldCheck } from "lucide-react";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 
-const ADMIN_EMAIL = "zsonken114@gmail.com";
+const ADMIN_EMAIL = "hauvietthinhvuong@gmail.com";
 const ADMIN_PASSWORD_HASH = "e228cdd4ec804a09ea93f44f7c398c3572bb97ba0f09c7f9350c11e9d7a96a54";
 const ADMIN_AUTH_KEY = "sonha-admin-authenticated";
 
