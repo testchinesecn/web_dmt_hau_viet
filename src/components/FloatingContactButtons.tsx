@@ -8,7 +8,7 @@ export function FloatingContactButtons() {
     <>
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/96 px-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] pt-2 shadow-[0_-10px_30px_rgba(15,23,42,0.14)] backdrop-blur sm:hidden">
         <div className="grid grid-cols-3 gap-2">
-          <MobileAction href={contactInfo.phoneHref} label="Gọi ngay" icon={PhoneCall} tone="dark" />
+          <MobileAction href={contactInfo.consultingPhoneHref} label="Gọi ngay" icon={PhoneCall} tone="dark" />
           <MobileAction href={contactInfo.zaloHref} label="Zalo" icon={MessageCircle} tone="blue" />
           <MobileAction href="/calculator" label="Tính nhanh" icon={Calculator} tone="amber" internal />
         </div>
@@ -16,7 +16,7 @@ export function FloatingContactButtons() {
 
       <div className="fixed bottom-5 left-5 z-30 hidden gap-2 sm:grid">
         <a
-          href={contactInfo.phoneHref}
+          href={contactInfo.consultingPhoneHref}
           className="grid h-11 w-11 place-items-center rounded-md bg-slate-950 text-white shadow-lg transition hover:bg-teal-800"
           aria-label="Gọi ngay"
           title="Gọi ngay"

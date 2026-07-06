@@ -59,16 +59,16 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href={contactInfo.phoneHref}
+            href={contactInfo.consultingPhoneHref}
             className="hidden items-center gap-2 rounded-md border border-slate-200 bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-sm transition hover:bg-teal-800 lg:inline-flex"
           >
             <PhoneCall size={17} aria-hidden />
-            Gọi kỹ thuật
+            Gọi tư vấn
           </a>
           <a
-            href={contactInfo.phoneHref}
+            href={contactInfo.consultingPhoneHref}
             className="grid h-10 w-10 place-items-center rounded-md bg-teal-700 text-white shadow-sm lg:hidden"
-            aria-label="Gọi kỹ thuật"
+            aria-label="Gọi tư vấn"
           >
             <PhoneCall size={18} aria-hidden />
           </a>
@@ -107,7 +107,7 @@ export function Header() {
               );
             })}
             <a
-              href={contactInfo.phoneHref}
+              href={contactInfo.consultingPhoneHref}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-3 text-sm font-black text-white"
             >
               <PhoneCall size={17} aria-hidden />
