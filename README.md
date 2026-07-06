@@ -1,0 +1,94 @@
+# Website tư vấn lắp đặt điện mặt trời
+
+MVP website quảng cáo và thu lead cho cửa hàng lắp đặt điện mặt trời áp mái. Project dùng Next.js App Router, TypeScript và Tailwind CSS.
+
+## Cài đặt
+
+```bash
+npm install
+```
+
+## Chạy local
+
+```bash
+npm run dev
+```
+
+Mặc định mở tại `http://localhost:3000`.
+
+## Build
+
+```bash
+npm run build
+```
+
+## Gửi lead về Telegram và Google Sheet
+
+Tạo file `.env.local` từ `.env.example` rồi điền các biến:
+
+```bash
+LEAD_NOTIFY_FROM_NAME="Điện mặt trời Sơn Hà"
+TELEGRAM_BOT_TOKEN="token_bot_telegram"
+TELEGRAM_CHAT_ID="chat_id_nhan_thong_bao"
+GOOGLE_SHEET_WEBHOOK_URL="url_web_app_google_apps_script"
+GOOGLE_SHEET_WEBHOOK_SECRET="chuoi_bi_mat_tu_chon"
+NEXT_PUBLIC_LEAD_WEBHOOK_URL="url_web_app_google_apps_script"
+```
+
+### Telegram
+
+1. Vào Telegram, nhắn `@BotFather`, tạo bot và lấy `TELEGRAM_BOT_TOKEN`.
+2. Nhắn thử một tin cho bot vừa tạo.
+3. Lấy `TELEGRAM_CHAT_ID` bằng bot như `@userinfobot`, hoặc thêm bot vào nhóm rồi lấy ID nhóm.
+4. Điền token/chat ID vào `.env.local`, khởi động lại `npm run dev`.
+
+Form tư vấn sẽ gửi tin nhắn lead về Telegram. Nếu khách upload ảnh hóa đơn/ảnh mái, hệ thống gửi thêm file đó sang Telegram dạng document.
+
+### Google Sheet
+
+1. Tạo Google Sheet mới.
+2. Vào `Extensions` > `Apps Script`.
+3. Dán nội dung file `docs/google-apps-script-leads.js`.
+4. Vào `Project Settings` > `Script Properties`, thêm:
+   - `TELEGRAM_BOT_TOKEN`: token bot Telegram.
+   - `TELEGRAM_CHAT_ID`: chat ID nhận lead.
+   - `LEAD_NOTIFY_FROM_NAME`: `Điện mặt trời Sơn Hà`.
+5. Deploy: `Deploy` > `New deployment` > chọn `Web app`.
+6. Chọn `Execute as: Me` và `Who has access: Anyone`, rồi copy Web app URL vào `GOOGLE_SHEET_WEBHOOK_URL` hoặc `NEXT_PUBLIC_LEAD_WEBHOOK_URL`.
+7. Nếu cập nhật code Apps Script sau này, chọn `Deploy` > `Manage deployments` > `Edit` > `New version` để URL cũ vẫn dùng được.
+
+Google Sheet sẽ lưu thông tin lead, nguồn gửi, số điện thoại, tiền điện, nhu cầu, ghi chú và tên file ảnh. File ảnh thật được gửi về Telegram.
+
+## Deploy thử nghiệm
+
+Có thể deploy lên Vercel bằng cách kết nối GitHub repository, chọn project Next.js và bấm Deploy.
+
+## Deploy GitHub Pages
+
+Repo đã có workflow `.github/workflows/pages.yml`. Khi push lên nhánh `master` hoặc `main`, GitHub Actions sẽ build bản tĩnh và đưa lên GitHub Pages.
+
+URL mặc định sau khi bật Pages:
+
+```text
+https://testchinesecn.github.io/web_dmt_hau_viet/
+```
+
+GitHub Pages chỉ chạy được HTML/CSS/JS tĩnh, không chạy được server API `/api/leads`. Bản này đã cấu hình để form và chatbot gửi lead trực tiếp sang Google Apps Script qua `NEXT_PUBLIC_LEAD_WEBHOOK_URL`; Apps Script sẽ ghi Google Sheet và gửi Telegram.
+
+## Các trang chính
+
+- Trang chủ
+- Dự án thực tế
+- Chi tiết dự án
+- Bảng giá
+- Tính hoàn vốn
+- Kiến thức
+- Bảo hành
+- Liên hệ
+- Admin mock
+
+## Ghi chú
+
+Kết quả tính toán chỉ là ước tính sơ bộ. Khi chạy thực tế cần kiểm tra lại công thức, giá vật tư, chính sách bảo hành và điều kiện thi công thực tế.
+
+Form tư vấn trong bản MVP lưu lead vào `localStorage` để demo. Khi triển khai thật có thể nối Google Sheet, email, CRM hoặc database.
