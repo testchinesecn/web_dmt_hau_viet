@@ -2,8 +2,8 @@ export const contactInfo = {
   brandName: "Hậu Việt Solar",
   phone: "0984.890.968 Mr Tuyến",
   phoneHref: "tel:0984890968",
-  consultingPhone: "086.714.6886 Ms Hậu",
-  consultingPhoneHref: "tel:0867146886",
+  consultingPhone: "0984.890.968 Mr Tuyến",
+  consultingPhoneHref: "tel:0984890968",
   zalo: "0984890968",
   zaloHref: "https://zalo.me/0984890968",
   phoneLines: [
